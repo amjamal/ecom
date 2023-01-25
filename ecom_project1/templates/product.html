@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block metadescription %}
+    {{ product.description|truncatewords:155}}
+{% endblock %}
+
+{% block title %}
+    {% if product %}
+        {{product.name}} - AMJ store
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div>
+        <p><a href="{{product.category.get_url}}">{{product.category}}</a> | {{product.name}}</p>
+    </div>
+</div>
+<br>
+<div class="container">
+    <div class="row mx-auto">
+        <div class="col-sm-6">
+            <img src="{{product.image.url}}" width="280px" alt="{{product.name}}">
+            <h2>{{product.name}}</h2>
+             <h4 style="font-size:115%"><i class="fas fa-rupee-sign"></i> {{product.price}}</h4>
+        </div>
+        <div class="col-sm-6">
+            <div class="shadow card text-center" style="height:auto;">
+
+            <h2>Product Description</h2>
+            <div class="card-body">
+            <p style="font-size:17px;">{{product.description}}</p>
+            </div>
+            </div>
+        </div>
+        <div class="container">
+        {% if product.stock <= 0 %}
+        <div class="shadow body" style="width:9rem;color:red;">
+        <p style="font-size:125%"><b>Out of Stock</b></p>
+        </div>
+        {% else %}
+        <a class="btn btn-primary" style="margin-bottom:20px;" href="{% url 'cart_app:add_cart' product.id %}" >Add to Cart</a>
+        {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

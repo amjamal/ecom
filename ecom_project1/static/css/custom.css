@@ -1,0 +1,87 @@
+body {
+    font-family: 'Dancing Script', cursive;
+}
+
+/***Navbar***/
+.nav-item {
+    letter-spacing : .2em;
+    font-size : 14px;
+    text-transform : uppercase;
+}
+
+.dropdown-item {
+    letter-spacing : .2em;
+    font-size : 14px;
+    text-transform : uppercase;
+}
+
+.my_footer {
+    background-color:grey;
+    height:60px;
+}
+
+.my_footer p{
+    padding-top:20px;
+    font-size:16px;
+    font-family: 'Lato', sans-serif;
+}
+
+/*** category page ***/
+.my_row_class {
+    padding-top:15px;
+}
+.my_row_class mx_auto {
+    color:#FF0000;
+    font-size:12px;
+}
+.my_image {
+    width:280px;
+    height:200px;
+}
+.my_title {
+    font-size:26px;
+    text-transform:uppercase;
+    letter-spacing:.1em;
+    font-family: 'Lato', sans-serif;
+
+}
+.card-body {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+}
+.my_search_text {
+    padding-top:20px;
+}
+
+/*** Cart Page ***/
+
+.custom_image{
+    width:120px;
+    height:120px;
+}
+
+.my_custom_table{
+    min-width:400px;
+    font-size:14px;
+}
+
+.my_custom_thead{
+    font-weight:normal;
+    text-transform:uppercase;
+    letter-spacing:.2em;
+    background-color:#f8f8fa!important;
+}
+
+.custom_a{
+    tetx-decoration:none;
+}
+
+.custom_icon{
+    text-decoration:none;
+    color:#868e96!important;
+}
+
+.my_custom_button{
+    margin-top5px;
+}

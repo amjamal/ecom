@@ -1,0 +1,44 @@
+<title>All Products</title>
+
+{% extends 'base.html' %}
+{% load static %}
+{% block metadescription %}
+    {% if category %}
+        {{category.description|truncatewords:155}}
+    {% else %}
+        Welcome to AMJ store...
+    {% endif %}
+{% endblock %}
+
+
+{% block content %}
+
+<h1 class="text-center">Our Products</h1>
+<div class="container">
+    <div class="row">
+        {% for allproducts in allprod %}
+        <div class="col-sm-3" style="margin-bottom:18px; margin-top:25px;">
+            <div class="shadow card text-center" style="width:18rem; height:19rem;">
+                <div class="card-img-top">
+                <a href="{{allproducts.get_url}}"><img src="{{allproducts.image.url}}" width="230px" height="200px" alt="{{product.name}}"></a>
+                </div>
+            <div class="card-body">
+                <h4 style="font-size:17px;"><b>{{allproducts.name}}</b></h4>
+                <p style="font-size:118%;">Rs.{{allproducts.price}}</p>
+            </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+        <div class="mx-auto">
+        {% if allprod.paginator.num_pages > 1 %}
+        <hr>
+        <div class="text-center">
+            {% for pg in allprod.paginator.page_range %}
+                <a href="?page={{pg}}" class="btn btn-light btn-sm {% if allprod.number == pg %} active {% endif %}">{{pg}}</a>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
