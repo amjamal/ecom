@@ -20,14 +20,6 @@
     {% if category %}
         <div>
             <div>
-                <p><a href="{% url 'ecom_project1app:allproducts' %}">Our Products</a></p>
-            </div>
-        </div>
-    {% endif %}
-
-    {% if category %}
-        <div>
-            <div>
                 <img src="{{category.image.url}}" width="100%" alt="{{category.name}}">
                 <h1 class="text-center"><b>Our {{category.name}} collections</b></h1>
             </div>
@@ -49,7 +41,7 @@
         <div class="col-sm-4" style="margin-bottom:25px;">
             <div class="shadow card text-center" style="width:18rem; height:22rem;">
                 <div class="card-img-top">
-                <a href="{{product.get_url}}"><img src="{{product.image.url}}" width="230px" height="220px" alt="{{product.name}}"></a>
+                <a href="{{product.get_absolute_url}}"><img src="{{product.image.url}}" width="230px" height="220px" alt="{{product.name}}"></a>
                 </div>
             <div class="card-body">
                 <h4><b>{{product.name}}</b></h4>

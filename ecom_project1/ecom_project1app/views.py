@@ -43,3 +43,8 @@ def allproducts(request):
         allprod = pagin.page(pagin.num_pages)
 
     return render(request, 'all_products.html', {'allprod': allprod})
+
+
+def cc(request):
+    return render(request, 'call.html')
+

@@ -70,7 +70,7 @@
                 </tbody>
             </table>
         </div>
-        <div class="col-6 col-sm-6 col-md-6 col-lg-6 text-center shadow card" style="height:285px;">
+        <div class="col-6 col-sm-6 col-md-6 col-lg-6 text-center" style="height:190px;">
             <table class="table my_custom_table">
                 <thead class="my_custom_thead">
                 <tr>
@@ -92,13 +92,22 @@
                 </tr>
                 </tbody>
             </table>
-        <div>
-            <a href="" class="btn btn-warning">Proceed to Buy</a>
         </div>
-        <br>
-        <div class="mx-auto">
-            <a href="{% url 'ecom_project1app:allProdCat' %}" class="btn btn-success btn-block my_custom_button">Continue Shopping</a>
+<div class="row mx-auto" style="height:152px;">
+        <div class="shadow card text-center" style="height:6rem; width:25rem;  margin-left:28rem;">
+            <div class="row mx-auto">
+                <table>
+                    <td style="padding-right:2rem;">
+                        <a href="" class="btn btn-warning">Proceed to Buy</a>
+                    </td>
+                    &nbsp;
+                    <td>
+                    <a href="{% url 'ecom_project1app:allProdCat' %}" class="btn btn-success btn-block my_custom_button">Continue Shopping</a>
+                    </td>
+                </table>
+            </div>
         </div>
+</div>
 {% endif %}
         </div>
     </div>
